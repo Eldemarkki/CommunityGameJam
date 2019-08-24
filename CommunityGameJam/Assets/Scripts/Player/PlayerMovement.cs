@@ -7,15 +7,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private GroundCheck groundCheck;
 
-    private Vector2 movement;
+    private float movement;
     private bool jumping;
     private bool canJump = true;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -30,7 +34,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
+        movement = Input.GetAxisRaw("Horizontal");
+
+        if(movement != 0)
+            spriteRenderer.flipX = movement < 0;
+
+        animator.SetBool("Moving", movement != 0);
 
         if (canJump)
         {
@@ -44,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
+        rb.velocity = new Vector2(movement * speed, rb.velocity.y);
 
         if (jumping)
         {
