@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class Picker : MonoBehaviour
 {
@@ -25,9 +26,11 @@ public class Picker : MonoBehaviour
             else
             {
                 // Not carrying anything
-                Collider2D hit = Physics2D.OverlapCircle(itemHolder.position, pickupRadius, pickupableLayer);
-                if (hit != null && hit.CompareTag("Pickupable"))
+                Collider2D[] hits = Physics2D.OverlapCircleAll(itemHolder.position, pickupRadius, pickupableLayer);
+                if (hits != null && hits.Any(h => h.CompareTag("Pickupable")))
                 {
+                    // Sort by distance and get the closest point
+                    var hit = hits.OrderBy(h => Vector3.Distance(h.transform.position, transform.position)).First();
                     PickupItem(hit.transform);
                 }
             }
