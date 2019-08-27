@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086dbefeeecaa8c4da5911119ed93730, type: 3}
+  m_Name: Dust
+  m_EditorClassIdentifier: 
+  name: Dust
+  icon: {fileID: 21300000, guid: cee932fd19158444583ac5b5ecb832c7, type: 3}
+  recipe1: {fileID: 11400000, guid: af4fa2107bc880a4eb85147a55396658, type: 2}
+  recipe2: {fileID: 11400000, guid: 396aedbc09d15d243807c9f124d08610, type: 2}
