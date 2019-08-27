@@ -19,7 +19,7 @@ public class QuestBar : MonoBehaviour
     {
         if (userAnswer != currentQuest.CorrectAnswer)
         {
-            gameManager.livesLeft--;
+            gameManager.ReduceHealth(1);
         }
 
         SetQuest(CreateRandomQuest());
