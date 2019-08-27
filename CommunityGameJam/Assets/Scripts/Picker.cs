@@ -7,7 +7,7 @@ public class Picker : MonoBehaviour
     [SerializeField] private Transform itemHolder;
     [SerializeField] private float pickupRadius;
 
-    private Transform carriedItem;
+    public Pickupable carriedItem;
 
     private void OnDrawGizmos()
     {
@@ -32,6 +32,7 @@ public class Picker : MonoBehaviour
                     // Sort by distance and get the closest point
                     var hit = hits.OrderBy(h => Vector3.Distance(h.transform.position, transform.position)).First();
                     PickupItem(hit.transform);
+                    carriedItem = hit.GetComponent<Pickupable>();
                 }
             }
         }
@@ -39,16 +40,14 @@ public class Picker : MonoBehaviour
 
     void PickupItem(Transform item)
     {
-        carriedItem = item;
-
-        carriedItem.localRotation = Quaternion.identity;
-        carriedItem.position = itemHolder.position;
-        carriedItem.SetParent(itemHolder);
+        item.localRotation = Quaternion.identity;
+        item.position = itemHolder.position;
+        item.SetParent(itemHolder);
     }
 
-    void DropItem()
+    public void DropItem()
     {
-        carriedItem.parent = null;
+        carriedItem.transform.parent = null;
         carriedItem = null;
     }
 }
