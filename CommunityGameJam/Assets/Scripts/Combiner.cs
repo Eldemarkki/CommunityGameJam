@@ -27,6 +27,10 @@ public class Combiner : MonoBehaviour
             Destroy(item1.gameObject);
             Destroy(item2.gameObject);
 
+            if(!itemManager.unlockedItems.Contains(newItem)){
+                itemManager.UnlockItem(newItem);
+            }
+
             itemCreator.InstantiateItem(newItem, outputSpot.position);
         }
         else

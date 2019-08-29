@@ -11,14 +11,19 @@ public class OrderPanel : MonoBehaviour
 
     private void Awake()
     {
-        foreach (Item item in itemManager.items)
-        {
-            Button button = Instantiate(buttonPrefab, contentParent).GetComponent<Button>();
-            button.onClick.AddListener(() => CreateItem(item));
-
-            button.GetComponentInChildren<TMP_Text>().text = item.name;
-            button.GetComponentsInChildren<Image>()[1].sprite = item.icon;
+        itemManager.onItemUnlock += AddItemToList;
+        foreach(Item item in itemManager.unlockedItems){
+            AddItemToList(item);
         }
+    }
+
+    private void AddItemToList(Item item)
+    {
+        Button button = Instantiate(buttonPrefab, contentParent).GetComponent<Button>();
+        button.onClick.AddListener(() => CreateItem(item));
+
+        button.GetComponentInChildren<TMP_Text>().text = item.name;
+        button.GetComponentsInChildren<Image>()[1].sprite = item.icon;
     }
 
     private void CreateItem(Item item)

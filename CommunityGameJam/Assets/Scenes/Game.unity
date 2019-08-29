@@ -1813,6 +1813,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4575b6a1c9658704e9084ff3245d7437, type: 2}
   - {fileID: 11400000, guid: 20a37526213af5648bf2b739b9a2a66f, type: 2}
   - {fileID: 11400000, guid: 05a3951e474299045af397e065bdc6ae, type: 2}
+  unlockedItems:
+  - {fileID: 11400000, guid: 396aedbc09d15d243807c9f124d08610, type: 2}
+  - {fileID: 11400000, guid: af4fa2107bc880a4eb85147a55396658, type: 2}
+  - {fileID: 11400000, guid: 4959abdc308e5ba4a9223d675454f3d7, type: 2}
+  - {fileID: 11400000, guid: 05a3951e474299045af397e065bdc6ae, type: 2}
 --- !u!4 &379811686
 Transform:
   m_ObjectHideFlags: 0
