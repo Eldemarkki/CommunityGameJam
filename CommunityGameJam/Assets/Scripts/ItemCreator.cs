@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class ItemCreator : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ItemCreator : MonoBehaviour
         go.name = item.name;
         go.GetComponent<SpriteRenderer>().sprite = item.icon;
         go.GetComponent<Pickupable>().item = item;
+        go.GetComponentInChildren<TMP_Text>().text = item.name;
 
         return go;
     }

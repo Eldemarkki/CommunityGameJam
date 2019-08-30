@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086dbefeeecaa8c4da5911119ed93730, type: 3}
+  m_Name: Tsunami
+  m_EditorClassIdentifier: 
+  name: Tsunami
+  icon: {fileID: 21300000, guid: bc48f1dba36a1dd4ba5f4dd1a954a786, type: 3}
+  recipe1: {fileID: 11400000, guid: 29c31a9a3cdf34046a025519e2d4643b, type: 2}
+  recipe2: {fileID: 11400000, guid: 291abe6006b2df04d9eb35c58dab77ab, type: 2}
