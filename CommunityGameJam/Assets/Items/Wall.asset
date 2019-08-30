@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 086dbefeeecaa8c4da5911119ed93730, type: 3}
-  m_Name: Plant
+  m_Name: Wall
   m_EditorClassIdentifier: 
-  name: Plant
-  icon: {fileID: 21300000, guid: 76976e9626a1d674294b01a43ef48a2d, type: 3}
-  recipe1: {fileID: 11400000, guid: 396aedbc09d15d243807c9f124d08610, type: 2}
-  recipe2: {fileID: 11400000, guid: 823407935fc04e94fa826671d11c60ae, type: 2}
+  name: Wall
+  icon: {fileID: 21300000, guid: 181205b982c82894aa759a3472ad4c03, type: 3}
+  recipe1: {fileID: 11400000, guid: e5094bd16e60a8743817d01651a4ab67, type: 2}
+  recipe2: {fileID: 11400000, guid: e5094bd16e60a8743817d01651a4ab67, type: 2}

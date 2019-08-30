@@ -49,4 +49,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = paused ? 0 : 1;
         pausePanel.SetActive(paused);
     }
+
+    public void PlayButtonSound(){
+        SoundManager.instance.Play("ButtonClick");
+    }
 }

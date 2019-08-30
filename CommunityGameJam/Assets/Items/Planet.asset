@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 086dbefeeecaa8c4da5911119ed93730, type: 3}
-  m_Name: Plant
+  m_Name: Planet
   m_EditorClassIdentifier: 
-  name: Plant
-  icon: {fileID: 21300000, guid: 76976e9626a1d674294b01a43ef48a2d, type: 3}
-  recipe1: {fileID: 11400000, guid: 396aedbc09d15d243807c9f124d08610, type: 2}
-  recipe2: {fileID: 11400000, guid: 823407935fc04e94fa826671d11c60ae, type: 2}
+  name: Planet
+  icon: {fileID: 21300000, guid: 2bd34d58405e7d047997ed5489c5c71d, type: 3}
+  recipe1: {fileID: 11400000, guid: f36ebfde60d9c45499f482925c1404d2, type: 2}
+  recipe2: {fileID: 11400000, guid: f36ebfde60d9c45499f482925c1404d2, type: 2}

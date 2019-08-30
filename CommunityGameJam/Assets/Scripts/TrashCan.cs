@@ -14,6 +14,7 @@ public class TrashCan : MonoBehaviour
                 picker.DropItem();
             }
 
+            SoundManager.instance.Play("TrashCan");
             Destroy(pickupable.gameObject);
         }
     }

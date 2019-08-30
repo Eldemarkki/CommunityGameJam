@@ -1800,19 +1800,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 11400000, guid: af4fa2107bc880a4eb85147a55396658, type: 2}
+  - {fileID: 11400000, guid: e5094bd16e60a8743817d01651a4ab67, type: 2}
+  - {fileID: 11400000, guid: f36ebfde60d9c45499f482925c1404d2, type: 2}
+  - {fileID: 11400000, guid: a00f587b8f52b844db7e4f6e3c886442, type: 2}
   - {fileID: 11400000, guid: 396aedbc09d15d243807c9f124d08610, type: 2}
   - {fileID: 11400000, guid: 2fbe3154f9ceff94ba12c7c21a65017d, type: 2}
+  - {fileID: 11400000, guid: 29c31a9a3cdf34046a025519e2d4643b, type: 2}
   - {fileID: 11400000, guid: 87e3c94362c3e5e4e8e2e236893f4e4d, type: 2}
+  - {fileID: 11400000, guid: 3aef3abba66785044a412d33cc9b0c78, type: 2}
   - {fileID: 11400000, guid: 4959abdc308e5ba4a9223d675454f3d7, type: 2}
+  - {fileID: 11400000, guid: 65663a98729deeb42a85d8460049cd5f, type: 2}
   - {fileID: 11400000, guid: 09ccbef4318409b48bce34362f2af16a, type: 2}
+  - {fileID: 11400000, guid: b59e55c79760ffe4b9b938cc921cf98e, type: 2}
+  - {fileID: 11400000, guid: 823407935fc04e94fa826671d11c60ae, type: 2}
   - {fileID: 11400000, guid: 7aa03024f6c19d9439e8d5aa6e7147cb, type: 2}
   - {fileID: 11400000, guid: e004fb7b7ba99fd458f4586bf52f3f9b, type: 2}
+  - {fileID: 11400000, guid: 7c7cc0235b18b0943b828b74f60a23b0, type: 2}
   - {fileID: 11400000, guid: 258df651277497b459f1049dc84b9217, type: 2}
   - {fileID: 11400000, guid: 291abe6006b2df04d9eb35c58dab77ab, type: 2}
   - {fileID: 11400000, guid: e178010225f01e344910842020eafb3a, type: 2}
   - {fileID: 11400000, guid: 4575b6a1c9658704e9084ff3245d7437, type: 2}
   - {fileID: 11400000, guid: 20a37526213af5648bf2b739b9a2a66f, type: 2}
+  - {fileID: 11400000, guid: 586b544f648ff884cab7206d08e311e2, type: 2}
+  - {fileID: 11400000, guid: a7fa2c25df5d60f47b8054ee96f6f251, type: 2}
+  - {fileID: 11400000, guid: 2ff8a94519028e045a8fabc6e2712f1a, type: 2}
   - {fileID: 11400000, guid: 05a3951e474299045af397e065bdc6ae, type: 2}
+  - {fileID: 11400000, guid: 03d3010af154cc54aa53b661df41f23e, type: 2}
   unlockedItems:
   - {fileID: 11400000, guid: 396aedbc09d15d243807c9f124d08610, type: 2}
   - {fileID: 11400000, guid: af4fa2107bc880a4eb85147a55396658, type: 2}
@@ -2969,6 +2982,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1253582911}
         m_MethodName: SetPaused
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1253582911}
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7542,6 +7566,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1253582911}
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1461428268
@@ -8195,6 +8230,7 @@ GameObject:
   - component: {fileID: 1614083611}
   - component: {fileID: 1614083612}
   - component: {fileID: 1614083608}
+  - component: {fileID: 1614083613}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8363,6 +8399,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1614083613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614083605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5e8c0769e8dd74aa2fad4aeb52d8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1647928888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9504,6 +9552,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1253582911}
         m_MethodName: GotoMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1253582911}
+        m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

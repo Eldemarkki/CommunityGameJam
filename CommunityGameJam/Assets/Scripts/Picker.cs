@@ -40,6 +40,7 @@ public class Picker : MonoBehaviour
 
     void PickupItem(Transform item)
     {
+        SoundManager.instance.Play("PickupItem");
         item.localRotation = Quaternion.identity;
         item.position = itemHolder.position;
         item.SetParent(itemHolder);

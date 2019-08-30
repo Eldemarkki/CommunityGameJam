@@ -31,10 +31,12 @@ public class Combiner : MonoBehaviour
                 itemManager.UnlockItem(newItem);
             }
 
-            itemCreator.InstantiateItem(newItem, outputSpot.position);
+            SoundManager.instance.Play("CombineItems");
+            itemCreator.InstantiateItem(newItem, outputSpot.position, 1.1f);
         }
         else
         {
+            SoundManager.instance.Play("WrongAnswer");
             popupManager.ShowPopup("That doesn't seem to be a recipe", 2f);
         }
     }

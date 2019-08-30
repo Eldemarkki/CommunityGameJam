@@ -19,8 +19,14 @@ public class QuestBar : MonoBehaviour
     {
         if (userAnswer != currentQuest.CorrectAnswer)
         {
+            SoundManager.instance.Play("WrongAnswer");
             gameManager.ReduceHealth(1);
         }
+        else
+        {
+            SoundManager.instance.Play("CorrectAnswer");
+        }
+
 
         SetQuest(CreateRandomQuest());
     }
@@ -43,7 +49,7 @@ public class QuestBar : MonoBehaviour
             {
                 item = itemManager.GetRandomItem();
             }
-            
+
             return new Quest(item);
         }
         else

@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Tree
   icon: {fileID: 21300000, guid: 7ca99982c4350ad448e5971085ebf23a, type: 3}
   recipe1: {fileID: 11400000, guid: 09ccbef4318409b48bce34362f2af16a, type: 2}
-  recipe2: {fileID: 0}
+  recipe2: {fileID: 11400000, guid: 7c7cc0235b18b0943b828b74f60a23b0, type: 2}

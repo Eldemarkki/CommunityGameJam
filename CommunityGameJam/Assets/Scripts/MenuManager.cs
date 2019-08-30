@@ -37,4 +37,8 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void PlaySound(string sound){
+        SoundManager.instance.Play(sound);
+    }
 }

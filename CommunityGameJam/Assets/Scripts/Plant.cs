@@ -10,6 +10,7 @@ public class Plant : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
+            SoundManager.instance.Play("ShakePlant");
             animator.SetTrigger("ShakePlant");
         }
     }

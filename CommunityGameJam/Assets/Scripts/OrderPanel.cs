@@ -28,6 +28,7 @@ public class OrderPanel : MonoBehaviour
 
     private void CreateItem(Item item)
     {
+        SoundManager.instance.Play("CreateItem");
         itemCreator.InstantiateItem(item, itemCreator.transform.position);
     }
 }
