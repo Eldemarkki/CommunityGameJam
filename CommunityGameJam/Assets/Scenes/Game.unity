@@ -2127,8 +2127,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.4575472, g: 1, b: 0.45755908, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e9e10f6e89fe4c148ae828e9e88ad89a, type: 3}
+  m_Color: {r: 0.5801887, g: 1, b: 0.61477196, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2147,7 +2147,7 @@ Transform:
   m_GameObject: {fileID: 388827731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: -1, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349202916e847794695f15f4aab665ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.5
+  radius: 0.7
   pickupableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -6921,7 +6921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919aa8eefcded1b4990129669d7e0752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 350
+  speed: 6
 --- !u!61 &1614083608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7762,8 +7762,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.8244955, b: 0.45882356, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 21e313f1358482045b6ce4bddcad664a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7782,7 +7782,7 @@ Transform:
   m_GameObject: {fileID: 1849690562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -8334,8 +8334,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.4575472, g: 1, b: 0.45755908, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e9e10f6e89fe4c148ae828e9e88ad89a, type: 3}
+  m_Color: {r: 0.5801887, g: 1, b: 0.61477196, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8354,7 +8354,7 @@ Transform:
   m_GameObject: {fileID: 1921154818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: 1, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -8371,7 +8371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349202916e847794695f15f4aab665ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.5
+  radius: 0.7
   pickupableMask:
     serializedVersion: 2
     m_Bits: 256

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake() {
         livesLeft = PlayerPrefs.GetInt("livesLeft", 5);
-        Debug.Log(livesLeft);
         healthText.text = livesLeft.ToString();
     }
 

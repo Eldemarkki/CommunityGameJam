@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         movement = direction * speed;
-        rb.velocity = movement * Time.deltaTime;
+        rb.velocity = movement;
 
         animator.SetFloat("Speed", direction.magnitude);
         animator.SetFloat("Horizontal", direction.x);
