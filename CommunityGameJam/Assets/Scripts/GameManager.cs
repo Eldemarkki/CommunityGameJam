@@ -7,9 +7,15 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
 
-    public int livesLeft = 3;
+    public int livesLeft;
     [SerializeField] TMP_Text healthText;
     [SerializeField] Animator loseAnimator;
+
+    private void Awake() {
+        livesLeft = PlayerPrefs.GetInt("livesLeft", 5);
+        Debug.Log(livesLeft);
+        healthText.text = livesLeft.ToString();
+    }
 
     public void ReduceHealth(int amount)
     {
@@ -21,6 +27,7 @@ public class GameManager : MonoBehaviour
         else
         {
             livesLeft -= amount;
+            PlayerPrefs.SetInt("livesLeft", livesLeft);
         }
 
         healthText.text = livesLeft.ToString();
@@ -29,6 +36,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         PlayerPrefs.DeleteKey("unlockedItems");
+        PlayerPrefs.DeleteKey("livesLeft");
         loseAnimator.SetTrigger("GameOver");
         StartCoroutine(GotoMenuAfter(3f));
     }
