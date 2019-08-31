@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        PlayerPrefs.DeleteKey("unlockedItems");
         loseAnimator.SetTrigger("GameOver");
         StartCoroutine(GotoMenuAfter(3f));
     }
