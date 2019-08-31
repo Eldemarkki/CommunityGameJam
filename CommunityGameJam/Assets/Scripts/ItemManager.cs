@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ItemManager : MonoBehaviour
@@ -8,6 +9,11 @@ public class ItemManager : MonoBehaviour
     public Item[] items;
 
     public List<Item> unlockedItems;
+
+    private void Awake()
+    {
+        unlockedItems = unlockedItems.OrderBy(i => i.name).ToList();
+    }
 
     public Item GetRandomItem()
     {
@@ -19,6 +25,8 @@ public class ItemManager : MonoBehaviour
             return;
 
         unlockedItems.Add(item);
+        unlockedItems = unlockedItems.OrderBy(i => i.name).ToList();
+
         onItemUnlock.Invoke(item);
 
         if(item.recipe1 != null && unlockedItems.Contains(item.recipe1)){

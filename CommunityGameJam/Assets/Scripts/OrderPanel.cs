@@ -9,7 +9,7 @@ public class OrderPanel : MonoBehaviour
     [SerializeField] private ItemCreator itemCreator;
     [SerializeField] private ItemManager itemManager;
 
-    private void Awake()
+    private void Start()
     {
         itemManager.onItemUnlock += AddItemToList;
         foreach(Item item in itemManager.unlockedItems){
@@ -21,6 +21,8 @@ public class OrderPanel : MonoBehaviour
     {
         Button button = Instantiate(buttonPrefab, contentParent).GetComponent<Button>();
         button.onClick.AddListener(() => CreateItem(item));
+
+        button.transform.SetSiblingIndex(itemManager.unlockedItems.IndexOf(item));
 
         button.GetComponentInChildren<TMP_Text>().text = item.name;
         button.GetComponentsInChildren<Image>()[1].sprite = item.icon;
