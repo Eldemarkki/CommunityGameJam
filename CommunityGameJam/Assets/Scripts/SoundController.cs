@@ -47,7 +47,7 @@ public class SoundController : MonoBehaviour
         mixer.GetFloat("sfxVolume", out currentVolume);
 
         if (currentVolume == 0)
-            mixer.SetFloat("sfxVolume", originalVolume);
+            mixer.SetFloat("sfxVolume", 20);
         else
             mixer.SetFloat("sfxVolume", 0);
 
