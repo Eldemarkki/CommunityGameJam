@@ -12,7 +12,32 @@ public class ItemManager : MonoBehaviour
 
     private void Awake()
     {
+        var itemNames = PlayerPrefs.GetString("unlockedItems", "").Split(';');
+
+        for (int i = 0; i < itemNames.Length; i++)
+        {
+            Item item = GetItemByName(itemNames[i]);
+            if (item)
+            {
+                unlockedItems.Add(item);
+            }
+        }
+
         unlockedItems = unlockedItems.OrderBy(i => i.name).ToList();
+    }
+
+    private Item GetItemByName(string itemName)
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            Item item = items[i];
+            if (item.name == itemName)
+            {
+                return item;
+            }
+        }
+
+        return null;
     }
 
     public Item GetRandomItem()
@@ -25,6 +50,7 @@ public class ItemManager : MonoBehaviour
             return;
 
         unlockedItems.Add(item);
+        PlayerPrefs.SetString("unlockedItems", PlayerPrefs.GetString("unlockedItems", "") + ";" + item.name);
         unlockedItems = unlockedItems.OrderBy(i => i.name).ToList();
 
         onItemUnlock.Invoke(item);
